@@ -1,51 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
 }
+
+/* Main Container */
 .main-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 675px;
-    background-color: #060822;
-    overflow: hidden;
-  }
-  
-  .child-div {
-    height: auto;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  figure {
-    margin: 0;
-  }
-  
-  .add-items {
-    margin-top: 15px;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .add-btn {
-    cursor: pointer;
-    color: #333;
-  }
-.show-items-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #060822;
+}
+
+/* Card Container */
+.child-div {
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100px;
+}
+
+figcaption {
   margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Input Section */
+.add-items {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.add-items input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-items button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-items button:hover {
+  background-color: #45a049;
+}
+
+/* List Section */
+.show-items {
+  margin-top: 20px;
+  max-height: 200px;
   overflow-y: auto;
-  max-height: 100px;
   padding: 5px;
- 
 }
 
 .each-item {
@@ -53,34 +84,48 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #eee;
-  
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.each-item:last-child {
-  border-bottom: none;
+.each-item h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
 
+.each-item button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+/* Empty State */
+.no-items {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Clear List Button */
 .remove-btn {
-  text-align: center;
   margin-top: 20px;
 }
 
 .remove-btn button {
-  padding: 8px 16px;
-  border: none;
-  background-color: #4caf50;
+  padding: 10px 20px;
+  background-color: #ff4c4c;
   color: #fff;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .remove-btn button:hover {
-  background-color: #45a049;
+  background-color: #e63e3e;
 }
-
-.fa {
-    font-size: 18px;
-    margin-left: 10px;
-  }
